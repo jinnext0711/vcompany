@@ -27,11 +27,22 @@ Plan  Dev   QA   PR  Legal  GA  Fin   Ana   HR
 
 ## ルール
 
+### 組織ルール
 - Owner（ユーザー）が最終意思決定者
 - CEO が各部門への指示を統括する
 - Auditor は CEO から独立し、Owner に直接報告する
 - Secretary は CEO をサポートし、MCP連携のハブとなる
 - 各部門は CEO の指示に基づき業務を遂行する
+
+### プロジェクト管理ルール
+- プロジェクトの管理は全て GitHub リポジトリ上で行う
+- 進捗管理には GitHub Issues を使用する
+  - タスクは Issue として起票し、担当部門の Label を付与する
+  - 進捗状況は Issue のステータス（Open / Closed）で管理する
+- マイルストーンの管理には GitHub Milestones を使用する
+- 作業の成果物は全て GitHub 上で管理し、Pull Request を通じてレビュー・マージする
+- プロジェクト全体の進捗は GitHub Projects で可視化する
+- ドキュメント・議事録・決定事項も全てリポジトリ内に記録する
 
 ## エージェント定義
 
