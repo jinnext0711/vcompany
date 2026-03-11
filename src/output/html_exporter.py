@@ -65,27 +65,52 @@ def export_html(content: dict, output_path: str, css_path: str = None) -> str:
 
 DEFAULT_CSS = """
 body {
-    font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.8;
-    color: #333;
+    color: #2D2D2D;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
-    background: #fff;
+    background: #FFFFFF;
 }
 h1 {
-    color: #1F4E79;
-    border-bottom: 3px solid #1F4E79;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    color: #1A1A2E;
+    border-bottom: 2px solid #53868B;
+    padding-bottom: 12px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 700;
 }
 h2 {
-    color: #2E75B6;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    color: #1A1A2E;
+    border-left: 4px solid #53868B;
+    padding-left: 12px;
+    padding-bottom: 4px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
 }
-ul { padding-left: 20px; }
-li { margin-bottom: 5px; }
-.container { padding: 20px; }
+p {
+    margin-bottom: 16px;
+    line-height: 1.9;
+}
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+li {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #53868B;
+}
+.container {
+    padding: 20px;
+}
 """
