@@ -64,53 +64,101 @@ def export_html(content: dict, output_path: str, css_path: str = None) -> str:
 
 
 DEFAULT_CSS = """
+/* vCompany デザインルール準拠 CSS
+   - Noto Sans JP のみ使用
+   - フラットカラー、グラデーション禁止
+   - WCAG AA コントラスト比準拠
+   - 8pxグリッド基準スペーシング
+   - 左揃え（均等揃え禁止）
+*/
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.8;
-    color: #2D2D2D;
-    max-width: 900px;
+    color: #2D2D2D;                   /* text: コントラスト比 12.6:1 AAA */
+    max-width: 720px;                 /* ≒日本語40文字/行 */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 48px 24px;               /* spacing-09, spacing-06 */
     background: #FFFFFF;
+    text-align: left;                 /* 均等揃え禁止 */
 }
 h1 {
-    color: #1A1A2E;
+    color: #1A1A2E;                   /* primary: コントラスト比 15.4:1 AAA */
     border-bottom: 2px solid #53868B;
-    padding-bottom: 12px;
-    margin-bottom: 40px;
+    padding-bottom: 16px;             /* spacing-05 */
+    margin-bottom: 48px;              /* spacing-09 */
+    margin-top: 0;
     font-size: 32px;
     font-weight: 700;
+    line-height: 1.2;
 }
 h2 {
     color: #1A1A2E;
     border-left: 4px solid #53868B;
-    padding-left: 12px;
-    padding-bottom: 4px;
-    margin-top: 40px;
-    margin-bottom: 16px;
+    padding-left: 16px;              /* spacing-05 */
+    padding-bottom: 4px;             /* spacing-02 */
+    margin-top: 48px;                /* spacing-09 */
+    margin-bottom: 24px;             /* spacing-06 */
     font-size: 24px;
     font-weight: 700;
+    line-height: 1.3;
+}
+h3 {
+    color: #16213E;                  /* secondary */
+    margin-top: 32px;               /* spacing-07 */
+    margin-bottom: 16px;            /* spacing-05 */
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
 }
 p {
-    margin-bottom: 16px;
-    line-height: 1.9;
+    margin-bottom: 32px;            /* フォントサイズ16px × 2 = 段落間スペース */
+    line-height: 1.8;
 }
 ul {
-    padding-left: 20px;
+    padding-left: 24px;             /* spacing-06 */
     list-style: none;
+    margin-bottom: 32px;            /* spacing-07 */
 }
 li {
-    margin-bottom: 8px;
-    padding-left: 16px;
+    margin-bottom: 8px;             /* spacing-03 */
+    padding-left: 24px;             /* spacing-06 */
     position: relative;
+    line-height: 1.8;
 }
 li::before {
     content: "—";
     position: absolute;
     left: 0;
-    color: #53868B;
+    color: #53868B;                 /* highlight */
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 32px;            /* spacing-07 */
+}
+th {
+    background: #1A1A2E;            /* primary */
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 12px 16px;             /* spacing-04, spacing-05 */
+    text-align: left;
+}
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #E0E0E0; /* border */
+}
+tr:nth-child(even) {
+    background: #F5F5F5;            /* light_bg */
+}
+figcaption, .caption {
+    color: #6B6B6B;                 /* light_text: コントラスト比 5.0:1 AA */
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;                /* spacing-03 */
 }
 .container {
-    padding: 20px;
+    padding: 24px;                  /* spacing-06 */
 }
 """
