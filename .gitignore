@@ -10,3 +10,10 @@ output/*.md
 output/*.html
 output/*.pdf
 output/test_content.json
+
+# ローカル個人設定
+.claude/CLAUDE.md
+
+# 出力ディレクトリ
+output/pptx/
+output/html/

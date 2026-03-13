@@ -1,0 +1,136 @@
+<svg width="100%" viewBox="0 0 680 740">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<text class="th" x="340" y="24" text-anchor="middle">資料作成ワークフロー（改訂版）</text>
+
+<!-- Phase 1 -->
+<g class="c-purple">
+<rect x="40" y="46" width="290" height="80" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="68" text-anchor="middle">Phase 1: リサーチ</text>
+<text class="ts" x="185" y="86" text-anchor="middle">企画部 + role-planning-research.md</text>
+<text class="ts" x="185" y="104" text-anchor="middle">→ research-report.md を出力</text>
+</g>
+<!-- NEW badge -->
+<rect x="280" y="42" width="48" height="18" rx="9" fill="#0D7C3D" opacity="0.9"/>
+<text x="304" y="54" text-anchor="middle" fill="#fff" font-size="10" font-weight="500" font-family="var(--font-sans)">強化</text>
+
+<!-- Arrow -->
+<line x1="185" y1="126" x2="185" y2="148" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Phase 2 -->
+<g class="c-purple">
+<rect x="40" y="148" width="290" height="64" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="172" text-anchor="middle">Phase 2: アウトライン</text>
+<text class="ts" x="185" y="190" text-anchor="middle">企画部 → outline.md を出力</text>
+</g>
+<rect x="280" y="144" width="48" height="18" rx="9" fill="#0D7C3D" opacity="0.9"/>
+<text x="304" y="156" text-anchor="middle" fill="#fff" font-size="10" font-weight="500" font-family="var(--font-sans)">強化</text>
+
+<line x1="185" y1="212" x2="185" y2="234" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Content QA gate -->
+<g class="c-amber">
+<rect x="40" y="234" width="290" height="64" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="258" text-anchor="middle">Content QA gate</text>
+<text class="ts" x="185" y="276" text-anchor="middle">品質管理部 + role-qa-content.md</text>
+</g>
+<rect x="280" y="230" width="36" height="18" rx="9" fill="#C62828" opacity="0.9"/>
+<text x="298" y="242" text-anchor="middle" fill="#fff" font-size="10" font-weight="500" font-family="var(--font-sans)">新規</text>
+
+<!-- Reject loop -->
+<path d="M40 266 C10 266, 10 100, 40 100" fill="none" stroke="var(--color-border-secondary)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<text class="ts" x="16" y="180" text-anchor="middle" fill="var(--color-text-tertiary)">NG</text>
+
+<!-- Pass arrow -->
+<line x1="185" y1="298" x2="185" y2="320" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="200" y="312" fill="var(--color-text-tertiary)">OK</text>
+
+<!-- Phase 3 -->
+<g class="c-teal">
+<rect x="40" y="320" width="290" height="50" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="340" text-anchor="middle">Phase 3: 執筆</text>
+<text class="ts" x="185" y="356" text-anchor="middle">広報部 + prompt-master.md</text>
+</g>
+<line x1="185" y1="370" x2="185" y2="392" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Phase 4 -->
+<g class="c-teal">
+<rect x="40" y="392" width="290" height="50" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="412" text-anchor="middle">Phase 4: デザインプラン</text>
+<text class="ts" x="185" y="428" text-anchor="middle">デザイン部 + slide-master-plan.md</text>
+</g>
+<line x1="185" y1="442" x2="185" y2="464" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Phase 5 -->
+<g class="c-blue">
+<rect x="40" y="464" width="290" height="64" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="486" text-anchor="middle">Phase 5: デザイン実装</text>
+<text class="ts" x="185" y="506" text-anchor="middle">開発部 + prompt-slide-v2 / table-v2 等</text>
+</g>
+<rect x="280" y="460" width="48" height="18" rx="9" fill="#0D7C3D" opacity="0.9"/>
+<text x="304" y="472" text-anchor="middle" fill="#fff" font-size="10" font-weight="500" font-family="var(--font-sans)">強化</text>
+
+<line x1="185" y1="528" x2="185" y2="550" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Visual QA gate -->
+<g class="c-amber">
+<rect x="40" y="550" width="290" height="64" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="572" text-anchor="middle">Visual QA gate</text>
+<text class="ts" x="185" y="590" text-anchor="middle">品質管理部 + qa-agent-prompt.md</text>
+</g>
+<rect x="280" y="546" width="36" height="18" rx="9" fill="#C62828" opacity="0.9"/>
+<text x="298" y="558" text-anchor="middle" fill="#fff" font-size="10" font-weight="500" font-family="var(--font-sans)">新規</text>
+
+<!-- Reject loop -->
+<path d="M40 582 C10 582, 10 480, 40 480" fill="none" stroke="var(--color-border-secondary)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<text class="ts" x="16" y="530" text-anchor="middle" fill="var(--color-text-tertiary)">NG</text>
+
+<line x1="185" y1="614" x2="185" y2="636" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="200" y="628" fill="var(--color-text-tertiary)">OK</text>
+
+<!-- Phase 7: Output -->
+<g class="c-coral">
+<rect x="40" y="636" width="290" height="50" rx="10" stroke-width="0.5"/>
+<text class="th" x="185" y="656" text-anchor="middle">Phase 7: ユーザーに提示</text>
+<text class="ts" x="185" y="672" text-anchor="middle">画像 + qa-report + content-qa-report</text>
+</g>
+
+<!-- Right side: file mapping -->
+<rect x="370" y="46" width="280" height="650" rx="12" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="510" y="72" text-anchor="middle">各フェーズのファイル対応</text>
+
+<text class="ts" x="390" y="100">Phase 1-2（企画部）:</text>
+<text class="t" x="400" y="120">role-planning-research.md</text>
+<text class="ts" x="400" y="138">→ research-report.md</text>
+<text class="ts" x="400" y="154">→ outline.md</text>
+
+<text class="ts" x="390" y="182">Content QA gate（品質管理部）:</text>
+<text class="t" x="400" y="202">role-qa-content.md</text>
+<text class="ts" x="400" y="220">→ content-qa-report.md</text>
+
+<text class="ts" x="390" y="252">Phase 3（広報部）:</text>
+<text class="t" x="400" y="272">prompt-master.md</text>
+<text class="ts" x="400" y="290">→ story-design.md</text>
+
+<text class="ts" x="390" y="318">Phase 4（デザイン部）:</text>
+<text class="t" x="400" y="338">prompt-master.md (Phase 5)</text>
+<text class="ts" x="400" y="356">→ slide-master-plan.md</text>
+
+<text class="ts" x="390" y="384">Phase 5（開発部）:</text>
+<text class="t" x="400" y="404">prompt-slide-v2.md</text>
+<text class="t" x="400" y="422">prompt-table-v2.md</text>
+<text class="t" x="400" y="440">prompt-diagram.md</text>
+<text class="t" x="400" y="458">prompt-eyecatch.md</text>
+<text class="ts" x="400" y="476">→ output.pptx</text>
+
+<text class="ts" x="390" y="508">Visual QA gate（品質管理部）:</text>
+<text class="t" x="400" y="528">qa-agent-prompt.md</text>
+<text class="ts" x="400" y="546">→ qa-report.md</text>
+
+<text class="ts" x="390" y="578">常時適用:</text>
+<text class="t" x="400" y="598">claude-md-snippet.md</text>
+<text class="t" x="400" y="616">anti-patterns.md</text>
+
+</svg>

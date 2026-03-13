@@ -146,6 +146,63 @@ class DesignConfig:
             int(hex_color[4:6], 16),
         )
 
+    # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    # コンサルファーム ブランドプリセット
+    # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    BRAND_PRESETS = {
+        "mckinsey": {
+            "primary": "051C2C", "highlight": "2251FF", "text": "222222",
+            "background": "FFFFFF", "secondary": "A0D2DB",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "bcg": {
+            "primary": "29BA74", "highlight": "006341", "text": "222222",
+            "background": "FFFFFF", "secondary": "333333",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "bain": {
+            "primary": "EE3224", "highlight": "CC0000", "text": "222222",
+            "background": "FFFFFF", "secondary": "333333",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "deloitte": {
+            "primary": "000000", "highlight": "86BC25", "text": "2D2D2D",
+            "background": "FFFFFF", "secondary": "75787B",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "accenture": {
+            "primary": "A100FF", "highlight": "6B6B6B", "text": "333333",
+            "background": "FFFFFF", "secondary": "000000",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "pwc": {
+            "primary": "DB4E18", "highlight": "E88D14", "text": "333333",
+            "background": "FFFFFF", "secondary": "2D2D2D",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "ey": {
+            "primary": "2E2E38", "highlight": "FFE600", "text": "2E2E38",
+            "background": "FFFFFF", "secondary": "333333",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+        "kpmg": {
+            "primary": "00338D", "highlight": "1E49E2", "text": "333333",
+            "background": "FFFFFF", "secondary": "D3D3D3",
+            "light_text": "999999", "light_bg": "F5F5F5", "border": "E0E0E0",
+        },
+    }
+
+    @classmethod
+    def from_brand(cls, brand_name: str) -> "DesignConfig":
+        """コンサルファームのブランドプリセットからDesignConfigを生成する。"""
+        preset = cls.BRAND_PRESETS.get(brand_name.lower())
+        if preset is None:
+            raise ValueError(
+                f"未対応のブランド: {brand_name}. "
+                f"対応ブランド: {', '.join(cls.BRAND_PRESETS.keys())}"
+            )
+        return cls(colors=preset)
+
     @staticmethod
     def calc_contrast_ratio(hex_fg: str, hex_bg: str) -> float:
         """2色のコントラスト比を計算する（WCAG基準）。"""

@@ -1,0 +1,117 @@
+<svg width="100%" viewBox="0 0 680 720">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<!-- PHASE LABEL -->
+<text class="ts" x="40" y="30">STEP 1: 思考の設計</text>
+
+<!-- Master prompt box -->
+<g class="c-purple">
+<rect x="120" y="46" width="440" height="120" rx="12" stroke-width="0.5"/>
+<text class="th" x="340" y="78" text-anchor="middle">prompt-master.md</text>
+<text class="ts" x="340" y="100" text-anchor="middle">ストーリー構造 / 問題設定 / 論理構造</text>
+<text class="ts" x="340" y="118" text-anchor="middle">インサイト / ビジュアル設計 / 実行視点</text>
+</g>
+
+<!-- Output files from master -->
+<line x1="230" y1="166" x2="230" y2="220" class="arr" marker-end="url(#arrow)"/>
+<line x1="340" y1="166" x2="340" y2="220" class="arr" marker-end="url(#arrow)"/>
+<line x1="450" y1="166" x2="450" y2="220" class="arr" marker-end="url(#arrow)"/>
+
+<text class="ts" x="340" y="192" text-anchor="middle">3つの設計ドキュメントを出力</text>
+
+<g class="c-teal">
+<rect x="120" y="220" width="160" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="200" y="240" text-anchor="middle" dominant-baseline="central">story-design.md</text>
+<text class="ts" x="200" y="258" text-anchor="middle" dominant-baseline="central">思考の骨格</text>
+</g>
+
+<g class="c-teal">
+<rect x="300" y="220" width="180" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="390" y="240" text-anchor="middle" dominant-baseline="central">slide-master-plan.md</text>
+<text class="ts" x="390" y="258" text-anchor="middle" dominant-baseline="central">全スライドの設計仕様</text>
+</g>
+
+<g class="c-teal">
+<rect x="500" y="220" width="140" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="570" y="240" text-anchor="middle" dominant-baseline="central">quality-check.md</text>
+<text class="ts" x="570" y="258" text-anchor="middle" dominant-baseline="central">品質検証</text>
+</g>
+
+<!-- Bridge section -->
+<rect x="160" y="310" width="360" height="44" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="340" y="336" text-anchor="middle" dominant-baseline="central">slide-master-plan.md が次の入力になる</text>
+
+<line x1="390" y1="272" x2="340" y2="310" class="arr" marker-end="url(#arrow)"/>
+
+<!-- PHASE 2 LABEL -->
+<text class="ts" x="40" y="400">STEP 2: ビジュアル実装</text>
+
+<!-- Four implementation prompts -->
+<line x1="240" y1="354" x2="140" y2="416" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="300" y1="354" x2="280" y2="416" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="380" y1="354" x2="420" y2="416" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="440" y1="354" x2="555" y2="416" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-blue">
+<rect x="60" y="416" width="160" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="436" text-anchor="middle" dominant-baseline="central">prompt-slide.md</text>
+<text class="ts" x="140" y="454" text-anchor="middle" dominant-baseline="central">スライド生成</text>
+</g>
+
+<g class="c-blue">
+<rect x="200" y="416" width="168" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="284" y="436" text-anchor="middle" dominant-baseline="central">prompt-eyecatch.md</text>
+<text class="ts" x="284" y="454" text-anchor="middle" dominant-baseline="central">アイキャッチ画像</text>
+</g>
+
+<g class="c-blue">
+<rect x="348" y="416" width="168" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="432" y="436" text-anchor="middle" dominant-baseline="central">prompt-diagram.md</text>
+<text class="ts" x="432" y="454" text-anchor="middle" dominant-baseline="central">技術図解</text>
+</g>
+
+<g class="c-blue">
+<rect x="496" y="416" width="150" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="571" y="436" text-anchor="middle" dominant-baseline="central">prompt-table.md</text>
+<text class="ts" x="571" y="454" text-anchor="middle" dominant-baseline="central">コンサル品質テーブル</text>
+</g>
+
+<!-- Output arrows -->
+<line x1="140" y1="468" x2="140" y2="520" class="arr" marker-end="url(#arrow)"/>
+<line x1="284" y1="468" x2="284" y2="520" class="arr" marker-end="url(#arrow)"/>
+<line x1="432" y1="468" x2="432" y2="520" class="arr" marker-end="url(#arrow)"/>
+<line x1="571" y1="468" x2="571" y2="520" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Final outputs -->
+<text class="ts" x="40" y="510">最終出力</text>
+
+<g class="c-coral">
+<rect x="60" y="520" width="160" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="546" text-anchor="middle" dominant-baseline="central">.pptx</text>
+</g>
+
+<g class="c-coral">
+<rect x="200" y="520" width="168" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="284" y="546" text-anchor="middle" dominant-baseline="central">.png (アイキャッチ)</text>
+</g>
+
+<g class="c-coral">
+<rect x="348" y="520" width="168" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="432" y="546" text-anchor="middle" dominant-baseline="central">.svg / .png (図解)</text>
+</g>
+
+<g class="c-coral">
+<rect x="496" y="520" width="150" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="571" y="546" text-anchor="middle" dominant-baseline="central">.pptx / .html / .xlsx</text>
+</g>
+
+<!-- Relationship summary -->
+<rect x="60" y="604" width="560" height="100" rx="12" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="340" y="630" text-anchor="middle">関係の要約</text>
+<text class="ts" x="340" y="656" text-anchor="middle">master = 何を伝えるかを設計（思考層）</text>
+<text class="ts" x="340" y="676" text-anchor="middle">4つの実装プロンプト = どう見せるかを実装（表現層）</text>
+<text class="ts" x="340" y="696" text-anchor="middle">masterの出力が、4つの実装プロンプトの入力になる</text>
+
+</svg>

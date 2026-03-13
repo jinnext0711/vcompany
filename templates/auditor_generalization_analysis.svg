@@ -1,0 +1,67 @@
+<svg width="100%" viewBox="0 0 680 660">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<text class="th" x="340" y="24" text-anchor="middle">Auditorの構造を分解する</text>
+
+<!-- Current monolith -->
+<g class="c-coral">
+<rect x="40" y="46" width="280" height="170" rx="10" stroke-width="0.5"/>
+<text class="th" x="180" y="68" text-anchor="middle">現在のAuditor</text>
+<text class="ts" x="180" y="90" text-anchor="middle">汎用の学習ループ</text>
+<text class="ts" x="180" y="108" text-anchor="middle">+ スライド固有の検査知識</text>
+<text class="ts" x="180" y="126" text-anchor="middle">+ テーブル固有のルール</text>
+<text class="ts" x="180" y="144" text-anchor="middle">+ PptxGenJS固有のバグ回避</text>
+<text class="ts" x="180" y="172" text-anchor="middle">→ スライド以外では機能しない</text>
+</g>
+
+<text class="th" x="180" y="240" text-anchor="middle">↓ 分離すべき</text>
+
+<!-- Separated architecture -->
+<g class="c-teal">
+<rect x="40" y="260" width="600" height="60" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="284" text-anchor="middle">Auditor Core（汎用エンジン）</text>
+<text class="ts" x="340" y="304" text-anchor="middle">失敗収集 → ROOT分類 → ルール更新 → 永続化 → 効果追跡</text>
+</g>
+
+<line x1="140" y1="320" x2="140" y2="350" class="arr" marker-end="url(#arrow)"/>
+<line x1="340" y1="320" x2="340" y2="350" class="arr" marker-end="url(#arrow)"/>
+<line x1="540" y1="320" x2="540" y2="350" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Domain modules -->
+<g class="c-purple">
+<rect x="40" y="350" width="180" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="130" y="374" text-anchor="middle">資料作成ドメイン</text>
+<text class="ts" x="130" y="394" text-anchor="middle">空白チェック</text>
+<text class="ts" x="130" y="410" text-anchor="middle">◎○△×禁止, ソース検証</text>
+</g>
+
+<g class="c-blue">
+<rect x="250" y="350" width="180" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="374" text-anchor="middle">コード開発ドメイン</text>
+<text class="ts" x="340" y="394" text-anchor="middle">テスト網羅率</text>
+<text class="ts" x="340" y="410" text-anchor="middle">セキュリティ, 型安全性</text>
+</g>
+
+<g class="c-green">
+<rect x="460" y="350" width="180" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="550" y="374" text-anchor="middle">リサーチドメイン</text>
+<text class="ts" x="550" y="394" text-anchor="middle">ソース信頼度</text>
+<text class="ts" x="550" y="410" text-anchor="middle">データ密度, 捏造指数</text>
+</g>
+
+<!-- What's universal -->
+<rect x="40" y="470" width="600" height="170" rx="12" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="340" y="496" text-anchor="middle">汎用（どのタスクでも同じ）</text>
+
+<text class="t" x="60" y="522">ROOT分類の5カテゴリ</text>
+<text class="ts" x="60" y="542">ルール不在 / 不遵守 / 配置ミス / 検査欠落 / 上流品質</text>
+
+<text class="t" x="60" y="568">学習ループの構造</text>
+<text class="ts" x="60" y="588">失敗収集 → 分類 → 対策 → ファイル永続化 → 次回自動適用</text>
+
+<text class="t" x="60" y="614">メタ監査の仕組み</text>
+<text class="ts" x="60" y="634">QA自体の品質検査 / 問題ゼロへの懐疑 / ルール棚卸し</text>
+
+</svg>

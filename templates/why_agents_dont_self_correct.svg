@@ -1,0 +1,65 @@
+<svg width="100%" viewBox="0 0 680 480">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<text class="th" x="340" y="24" text-anchor="middle">なぜエージェントは自分で問題を見つけて直せないのか</text>
+
+<!-- Current problem -->
+<g class="c-coral">
+<rect x="40" y="48" width="600" height="52" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="70" text-anchor="middle">現状: 単発の品質ゲート（点の検査）</text>
+<text class="ts" x="340" y="88" text-anchor="middle">問題を見つけても「その場限りの修正」で終わり、組織の知識として蓄積されない</text>
+</g>
+
+<line x1="340" y1="100" x2="340" y2="130" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Three missing pieces -->
+<g class="c-amber">
+<rect x="40" y="130" width="190" height="90" rx="8" stroke-width="0.5"/>
+<text class="th" x="135" y="154" text-anchor="middle">欠落1</text>
+<text class="ts" x="135" y="172" text-anchor="middle">失敗の学習ループ</text>
+<text class="ts" x="135" y="190" text-anchor="middle">同じ失敗を何度も繰り返す</text>
+<text class="ts" x="135" y="208" text-anchor="middle">anti-patternsが更新されない</text>
+</g>
+
+<g class="c-amber">
+<rect x="245" y="130" width="190" height="90" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="154" text-anchor="middle">欠落2</text>
+<text class="ts" x="340" y="172" text-anchor="middle">部門間の対立構造</text>
+<text class="ts" x="340" y="190" text-anchor="middle">生成者と検査者が同じ目線</text>
+<text class="ts" x="340" y="208" text-anchor="middle">「まあいいか」で通過する</text>
+</g>
+
+<g class="c-amber">
+<rect x="450" y="130" width="190" height="90" rx="8" stroke-width="0.5"/>
+<text class="th" x="545" y="154" text-anchor="middle">欠落3</text>
+<text class="ts" x="545" y="172" text-anchor="middle">メタ監査の不在</text>
+<text class="ts" x="545" y="190" text-anchor="middle">QA自体の品質を誰も検査しない</text>
+<text class="ts" x="545" y="208" text-anchor="middle">「問題ゼロ」を信じてしまう</text>
+</g>
+
+<line x1="340" y1="220" x2="340" y2="260" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Solution -->
+<g class="c-teal">
+<rect x="40" y="260" width="600" height="52" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="282" text-anchor="middle">解決: 自己改善ループ（線の検査 + 学習の蓄積）</text>
+<text class="ts" x="340" y="300" text-anchor="middle">失敗 → 原因分析 → ルール追加 → 次回は同じ失敗をしない、のサイクルを組織に埋め込む</text>
+</g>
+
+<line x1="340" y1="312" x2="340" y2="340" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Key role -->
+<g class="c-purple">
+<rect x="140" y="340" width="400" height="80" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="366" text-anchor="middle">鍵: Auditor（監査役）の本来の役割</text>
+<text class="ts" x="340" y="386" text-anchor="middle">現在は未活用。ここに「自己改善エンジン」を置く</text>
+<text class="ts" x="340" y="404" text-anchor="middle">Owner直轄 = CEOの指示系統から独立 = 忖度なし</text>
+</g>
+
+<!-- Arrow to bottom text -->
+<text class="ts" x="340" y="450" text-anchor="middle">Auditorが「組織のルール自体を改善する」役割を担う</text>
+<text class="ts" x="340" y="468" text-anchor="middle">= 品質管理部はルールに従って検査 / Auditorはルールそのものを進化させる</text>
+
+</svg>
